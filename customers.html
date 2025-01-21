@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customers</title>
+</head>
+<body>
+    
+
+    <h1>Our Customers</h1>
+
+    <script>
+        // Retrieve the saved letterIndex and counter from localStorage
+        let letterIndex = parseInt(localStorage.getItem('letterIndex')) || 0;
+        let counter = parseInt(localStorage.getItem('counter')) || 1;
+
+        function generateCustomId() {
+        const letters = String.fromCharCode(65 + Math.floor(letterIndex / 26)) +
+                        String.fromCharCode(65 + (letterIndex % 26));
+        
+        const number = counter.toString().padStart(5, '0');
+        
+        // Increment and save to localStorage
+        letterIndex++;
+        counter++;
+        
+        localStorage.setItem('letterIndex', letterIndex);
+        localStorage.setItem('counter', counter);
+        
+        return `${letters}${number}`;
+        }
+    </script>
+</body>
+</html>

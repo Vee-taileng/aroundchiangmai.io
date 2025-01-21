@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" id="formsubmit">
+        <label for="name">Name</label><br>
+        <input type="text" id="name" placeholder="Your name here"><br>
+        <label for="lastName">Last Name</label><br>
+        <input type="text" id="lastName" placeholder="Your last name please"><br>
+        <label for="email">Email Address</label><br>
+        <input type="email" id="email" placeholder="vee@gmail.com"><br>
+
+        <select id="tourOrganizer">
+            <option value="">--Select One--</option>
+            <option value="Living Green">Living Green</option>
+            <option value="Wendy">Wendy Tour</option>
+            <option value="Smile Elephant">Smile Elephant</option>
+        </select><br>
+
+        <select id="lge-program" style="display: none;">
+            <option value="">--Select A Trip--</option>
+            <option value="One Day Elephant">One Day Elephant</option>
+            <option value="Two Days Elephant">Two Days Elephant</option>
+            <option value="Half Day Elephant">Half Day Elephant</option>
+        </select>
+
+        <select id="wendy-program" style="display: none;">
+            <option value="">--Select A Trip--</option>
+            <option value="Cooking">Cooking</option>
+            <option value="Shopping">Shopping</option>
+            <option value="Walking">Walking</option>
+        </select>
+
+        <select id="smile-elephants-program" style="display: none;">
+            <option value="">--Select A Trip--</option>
+            <option value="Smile">Smile</option>
+            <option value="Chiang Rai">Chiang Rai</option>
+            <option value="Lampu">Lampu</option>
+        </select>
+
+        <input type="submit" value="Submit Now">
+    </form>
+
+    <script>
+        const submit_form = document.querySelector("#formsubmit");
+        const tourOrganizer = document.querySelector("#tourOrganizer");
+        const lgeProgram = document.querySelector("#lge-program");
+        const wendyProgram = document.querySelector("#wendy-program");
+        const smileElephantProgram = document.querySelector("#smile-elephants-program");
+
+        tourOrganizer.addEventListener("change", ()=>{
+            lgeProgram.style.display = "none";
+            wendyProgram.style.display = "none";
+            smileElephantProgram.style.display = "none";
+
+            if (tourOrganizer.value === "Living Green") {
+                lgeProgram.style.display = "block";;
+            } else if (tourOrganizer.value === "Wendy") {
+                wendyProgram.style.display = "block";
+            } else if (tourOrganizer.value === "Smile Elephant") {
+                smileElephantProgram.style.display = "block";
+            }
+        })
+        
+        
+        submit_form.addEventListener("submit", (event) => {
+            event.preventDefault();
+            
+            const name = document.querySelector("#name").value;
+            const lastName = document.querySelector("#lastName").value;
+            const email = document.querySelector("#email").value;                  
+
+            let selectedProgram;
+            
+            if (tourOrganizer.value === "Living Green") {
+                selectedProgram = lgeProgram.value;
+            } else if (tourOrganizer.value === "Wendy") {
+                selectedProgram = wendyProgram.value;
+            } else if (tourOrganizer.value === "Smile Elephant") {
+                selectedProgram = smileElephantProgram.value;
+            }
+
+            let result = {
+                name,
+                lastName,
+                email,
+                tourOrganizer: tourOrganizer.value,
+                selectedProgram,
+            };
+
+            console.log(result);
+        });
+    </script>
+</body>
+</html>

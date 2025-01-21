@@ -1,0 +1,211 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f2f2f2;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+    position: relative;
+}
+
+header h1 {
+    margin-bottom: 0.5rem;
+}
+
+/* Styles for navigation */
+nav {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #333;
+    color: white;
+    padding: 1rem;
+}
+
+.nav-links {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    margin-right: 1rem;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+}
+
+.burger {
+    display: none;
+    /* Hidden by default on larger screens */
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.burger div {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 3px;
+    transition: all 0.3s ease;
+}
+
+/* Responsive styles for tablet and smaller screens */
+@media screen and (max-width: 768px) {
+    .nav-links {
+        display: none;
+        /* Hide nav links by default on smaller screens */
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 80px;
+        /* Adjust top position as needed */
+        left: 0;
+        background-color: #333;
+        text-align: center;
+    }
+
+    .nav-links.active {
+        display: flex;
+        /* Show nav links when active */
+    }
+
+    .burger {
+        display: flex;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        /* Show hamburger menu on smaller screens */
+    }
+
+    .logo h1{
+        font-size: 1.2rem;
+    }
+    
+}
+
+main {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+section {
+    background-color: #fff;
+    margin-bottom: 2rem;
+    padding: 1rem;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+section h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.stats {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.stat {
+    text-align: center;
+}
+
+.booking-list,
+.tour-list {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.tour-list {
+    flex-direction: column!important;
+}
+
+.tour-list li {
+    width: 100%!important;
+    text-align: left;
+    background-color: white!important;
+    padding-left: 15px!important;
+}
+
+.booking-list li,
+.tour-list li {
+    flex: 1;
+    padding: 1rem 0;
+    background-color: rgb(241, 203, 153);
+    width: 33%;
+    min-width: 250px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+.booking-list li:last-child,
+.tour-list li:last-child {
+    border-bottom: none;
+}
+
+.view-voucher {
+    background-color: black;
+    width: 180px;
+    margin: auto;
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.view-voucher a {
+    color: white;
+    text-decoration: none;
+
+}
+
+@media screen and (max-width: 768px) {
+    header {
+        padding: 0.5rem;
+    }
+
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 1rem 0;
+    }
+
+    section {
+        padding: 0.5rem;
+    }
+
+    .stats {
+        flex-direction: column;
+    }
+
+    .total-booking {
+        margin: 20px 0;
+    }
+}

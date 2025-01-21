@@ -1,0 +1,212 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    position: relative;
+}
+.container {
+    padding: 10px;
+    margin: 10px auto;
+    max-width: 600px;
+    background-color: #f5f8ed;
+}
+
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-color: hsla(0, 0%, 16%, 0.781);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    display: none;
+}
+
+.overlay-toggle{
+    display: block;
+}
+
+.overlay-text-holder h1{
+    font-size: 1rem;
+}
+
+.overlay-text-holder {
+    width: 320px;
+    height: 200px;
+    padding: 10px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+}
+
+.overlay-text-holder .close-btn{
+    padding: 10px;
+    margin-top: 20px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+fieldset {
+    margin-bottom: 20px;
+    padding: 10px;
+}
+
+legend {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #333333;
+    margin-bottom: 10px;
+}
+
+.personal-info {
+    width: 100%;
+}
+
+.name-field{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    gap: 10px;
+    margin: 10px 0px;
+
+}
+
+.name-field div, 
+.name-field select{
+    width: 50%;
+}
+
+
+label{
+    display: block;
+}
+
+input[type=text],
+input[type=email],
+input[type=number],
+input[type=date],
+input[type=time],
+input[type=tel],
+option,
+textarea,
+select {
+    width: calc(100% - 20px);
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+.required {
+    color: red;
+}
+
+@media screen and (max-width: 425px) {
+    .name-field{
+        flex-direction: column;
+    }
+    .name-field div,
+        .name-field select{
+        width: 100%;
+    }
+}
+
+
+.pickup-time-selection {
+    width: 100% !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.pickup-time-selection div{
+    max-width: 150px;
+    align-items: center;
+    margin: 10px 0;
+    border-radius: 10px;
+}
+.pickup-time-selection label{
+    display: inline;
+    font-size: 0.8rem;
+    margin-right: 5px;
+}
+
+.pickup-time {
+    width: 100%;
+}
+
+.pickup-time .time,
+.pickup-time .date,
+.pickup-time input{
+    width: 100% !important;
+}
+
+.trip-type {
+    background-color: #292929;
+    color: white;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 10px 0;
+    border-radius: 10px;
+}
+
+.trip-type div {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+}
+
+.pricing fieldset {
+    margin-bottom: 10px;
+    padding: 5px;
+    border: none
+}
+
+.pricing {
+    border: 0.5px solid rgba(0,0,0,0.5);
+}
+.pricing legend {
+    font-size: 0.8em;
+    font-weight: 500;
+    color: #333333;
+    margin-bottom: 5px;
+}
+
+input[type=submit] {
+    background-color: #4CAF50;
+    color: #ffffff;
+    padding: 14px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    text-transform: uppercase;
+    display: block;
+    margin: auto;
+}
+
+input[type=submit]:hover {
+    background-color: #45a049;
+    margin-bottom: 20px;
+}
+
+.div-wrap{
+    width: 200px;
+    margin: auto;
+}
+
+textarea {
+    width: 100%;
+}

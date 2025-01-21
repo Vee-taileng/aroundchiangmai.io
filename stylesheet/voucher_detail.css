@@ -1,0 +1,156 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    position: relative;
+}
+
+.voucer-wrap {
+    margin: 0 auto;
+    padding: 10px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#reservation-date{
+    font-size: 14px;
+    font-style: italic;
+}
+
+#back-to-dashboard {
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+    background-color: black;
+    color: white;
+    padding: 5px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.voucher {
+    padding: 10px;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.voucher-heading {
+    margin-bottom: 0px!important;
+}
+
+.voucher-heading h1 {
+    font-size: 1.8rem;
+    color: #222;
+}
+
+.voucher-heading img {
+    width: 150px;
+    height: 80px;
+    object-fit: cover;
+}
+
+.voucher-guest-info {
+    display: flex;
+    justify-content: space-between;
+}
+
+.guest-info p {
+    margin-bottom: 5px;
+    font-size: 0.8rem;
+}
+
+.voucher-company-info h4 {
+    font-size: 1rem;
+    color: #333;
+    text-align: end;
+}
+
+.voucher-company-info p {
+    margin-bottom: 5px;
+    text-align: end;
+    font-size: 0.8rem;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+table,
+th,
+td {
+    border: 1px solid #ddd;
+}
+
+th,
+td {
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+td {
+    background-color: #fff;
+    font-size: 0.8rem;
+}
+
+.bank-detail p {
+    font-size: 0.8rem;
+}
+
+table td[colspan="1.5"] {
+    background-color: #f4f4f4;
+    padding: 10px 20px;
+}
+
+table td[colspan="4"] {
+    text-align: right;
+    padding: 10px 20px;
+}
+
+.table-color td {
+    background-color:rgba(248, 237, 213, 0.966);
+}
+
+h3 small {
+    font-size: 14px;
+    color: #777;
+}
+
+.policy {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+}
+ul {
+    padding-left: 15px;
+}
+
+.signature-field{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
